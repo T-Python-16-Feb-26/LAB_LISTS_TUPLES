@@ -16,9 +16,9 @@ for movie in movies:
         highly_rated_movies.append([movie[0], movie[1], format(avg_rating, '.2f')])
         #counter += 1
 #print("---------------------------")
-highly_rated_movies.sort(key=lambda x: x[2], reverse=True)
+#highly_rated_movies.sort(key=lambda x: x[2], reverse=True)
 #highly_rated_movies = sorted(highly_rated_movies, key=lambda x: x[2], reverse=True)
 counter = 1
-for movie in highly_rated_movies:
+for movie in  sorted(highly_rated_movies, key=lambda x: x[2], reverse=True):
     print(f"{counter}. {movie[0]} ({movie[1]}) - Avergae rating: {movie[2]} ★") 
     counter += 1
